@@ -11,15 +11,17 @@ interface QuizProps {
   questions: Question[];
   storageKey: string;
   courseTitle: string;
+  examTitle: string;
 }
 
-export default function Quiz({ questions, storageKey, courseTitle }: QuizProps) {
+export default function Quiz({ questions, storageKey, courseTitle, examTitle }: QuizProps) {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [answers, setAnswers] = useState<(number | number[] | null)[]>(new Array(questions.length).fill(null));
   const [submitted, setSubmitted] = useState(false);
   const [timeLeft, setTimeLeft] = useState(EXAM_TIME_MINUTES * 60);
   const [showConfirmation, setShowConfirmation] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
+  const [farthestQuestion, setFarthestQuestion] = useState(0);
 
   // Load state from local storage on mount
   useEffect(() => {
@@ -31,6 +33,7 @@ export default function Quiz({ questions, storageKey, courseTitle }: QuizProps) 
         if (parsed.answers !== undefined) setAnswers(parsed.answers);
         if (parsed.timeLeft !== undefined) setTimeLeft(parsed.timeLeft);
         if (parsed.submitted !== undefined) setSubmitted(parsed.submitted);
+        if (parsed.farthestQuestion !== undefined) setFarthestQuestion(parsed.farthestQuestion);
       } catch (e) {
         console.error('Failed to parse saved quiz state', e);
       }
@@ -45,10 +48,16 @@ export default function Quiz({ questions, storageKey, courseTitle }: QuizProps) 
       currentQuestion,
       answers,
       timeLeft,
-      submitted
+      submitted,
+      farthestQuestion
     };
     localStorage.setItem(storageKey, JSON.stringify(stateToSave));
-  }, [currentQuestion, answers, timeLeft, submitted, isLoaded]);
+  }, [currentQuestion, answers, timeLeft, submitted, farthestQuestion, isLoaded]);
+
+  // Update farthest question when current question changes
+  useEffect(() => {
+    setFarthestQuestion(prev => Math.max(prev, currentQuestion));
+  }, [currentQuestion]);
 
   // Timer effect
   useEffect(() => {
@@ -79,7 +88,7 @@ export default function Quiz({ questions, storageKey, courseTitle }: QuizProps) 
         newAnswers[currentQuestion] = [...current, optionIndex];
       }
     } else {
-      newAnswers[currentQuestion] = optionIndex;
+      newAnswers[currentQuestion] = newAnswers[currentQuestion] === optionIndex ? null : optionIndex;
     }
 
     setAnswers(newAnswers);
@@ -122,6 +131,7 @@ export default function Quiz({ questions, storageKey, courseTitle }: QuizProps) 
     setAnswers(new Array(questions.length).fill(null));
     setSubmitted(false);
     setTimeLeft(EXAM_TIME_MINUTES * 60);
+    setFarthestQuestion(0);
   };
 
   const calculateScore = () => {
@@ -166,24 +176,44 @@ export default function Quiz({ questions, storageKey, courseTitle }: QuizProps) 
   const currentAnswer = answers[currentQuestion];
   const isLastQuestion = currentQuestion === questions.length - 1;
 
-  // Fully answered: single-select needs 1 answer, multi-select needs exactly 2
-  const isFullyAnswered = currentQ.multipleSelect
-    ? Array.isArray(currentAnswer) && currentAnswer.length === 2
-    : currentAnswer !== null && typeof currentAnswer === 'number';
+  const isFullyAnsweredFn = (q: Question, a: number | number[] | null) => {
+    if (q.multipleSelect) {
+      const expectedCount = Array.isArray(q.answer) ? q.answer.length : 2;
+      return Array.isArray(a) && a.length === expectedCount;
+    }
+    return a !== null && typeof a === 'number';
+  };
+
+  const isFullyAnswered = isFullyAnsweredFn(currentQ, currentAnswer);
+  
+  const hasUnanswered = answers.some((a, idx) => !isFullyAnsweredFn(questions[idx], a));
+
+  const handleReviewSkipped = () => {
+    const firstUnansweredIndex = answers.findIndex((a, idx) => !isFullyAnsweredFn(questions[idx], a));
+    if (firstUnansweredIndex !== -1) {
+      setCurrentQuestion(firstUnansweredIndex);
+    }
+  };
 
   // Can skip if not fully answered (partial or unanswered)
   const canSkip = !isFullyAnswered;
 
-  // Count skipped (null) questions for the header info
-  const skippedCount = answers.filter(a => a === null).length;
+  // Track indices of skipped questions for the dropdown
+  // A question is considered "skipped" if it's unanswered, we've gone past it (or reached it before), and it's not the current question.
+  const skippedIndices = answers
+    .map((a, idx) => (!isFullyAnsweredFn(questions[idx], a) && idx <= farthestQuestion && idx !== currentQuestion ? idx : -1))
+    .filter(idx => idx !== -1);
 
   return (
     <div className="min-h-screen bg-background flex flex-col">
       <QuizHeader
+        examTitle={examTitle}
+        courseTitle={courseTitle}
         currentQuestion={currentQuestion}
         totalQuestions={questions.length}
         timeLeft={timeLeft}
-        skippedCount={skippedCount}
+        skippedIndices={skippedIndices}
+        onJumpToQuestion={(idx) => setCurrentQuestion(idx)}
       />
 
       <div className="flex-1 flex items-center justify-center p-4 md:p-8">
@@ -205,6 +235,8 @@ export default function Quiz({ questions, storageKey, courseTitle }: QuizProps) 
             onNext={handleNext}
             onSkip={handleSkip}
             onSubmit={handleSubmit}
+            hasUnanswered={hasUnanswered}
+            onReviewSkipped={handleReviewSkipped}
           />
         </div>
       </div>

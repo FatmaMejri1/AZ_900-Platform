@@ -9,6 +9,8 @@ export default function NavigationButtons({
   onNext,
   onSkip,
   onSubmit,
+  hasUnanswered,
+  onReviewSkipped,
 }: {
   canGoPrevious: boolean;
   isFullyAnswered: boolean;
@@ -18,6 +20,8 @@ export default function NavigationButtons({
   onNext: () => void;
   onSkip: () => void;
   onSubmit: () => void;
+  hasUnanswered: boolean;
+  onReviewSkipped: () => void;
 }) {
   return (
     <div className="flex flex-col gap-3">
@@ -42,6 +46,14 @@ export default function NavigationButtons({
             className="flex items-center justify-center gap-2 flex-1 px-6 py-3 bg-primary text-primary-foreground rounded-lg font-semibold hover:bg-primary/90 disabled:opacity-40 disabled:cursor-not-allowed transition-all duration-200"
           >
             Next
+            <ChevronRight className="w-4 h-4" />
+          </button>
+        ) : hasUnanswered ? (
+          <button
+            onClick={onReviewSkipped}
+            className="flex items-center justify-center gap-2 flex-1 px-6 py-3 bg-amber-500 text-white rounded-lg font-semibold hover:bg-amber-600 transition-all duration-200"
+          >
+            Review Skipped
             <ChevronRight className="w-4 h-4" />
           </button>
         ) : (
@@ -69,9 +81,9 @@ export default function NavigationButtons({
       )}
 
       {/* Hint message for unanswered last question */}
-      {isLastQuestion && !isFullyAnswered && (
-        <p className="text-center text-xs text-amber-600 dark:text-amber-400 font-medium">
-          ← Use &quot;Previous&quot; to go back and answer skipped questions before finishing.
+      {isLastQuestion && hasUnanswered && (
+        <p className="text-center text-xs text-amber-600 dark:text-amber-400 font-medium mt-2">
+          You must answer all questions before finishing. Click &quot;Review Skipped&quot; to continue.
         </p>
       )}
     </div>

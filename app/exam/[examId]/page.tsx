@@ -11,8 +11,8 @@ export default async function ExamPage({ params }: { params: Promise<{ examId: s
   }
 
   return (
-    <div className="min-h-screen bg-background p-8">
-      <div className="max-w-4xl mx-auto">
+    <div className="min-h-screen bg-background p-4 md:p-8 flex flex-col">
+      <div className="max-w-4xl mx-auto w-full flex-1 flex flex-col">
         <div className="mb-8">
           <Link href="/" className="text-sm text-primary hover:underline flex items-center">
             <svg className="w-4 h-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">

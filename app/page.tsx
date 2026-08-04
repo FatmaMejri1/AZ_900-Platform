@@ -3,9 +3,9 @@ import { exams } from '@/lib/data';
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-background p-8">
-      <div className="max-w-4xl mx-auto">
-        <header className="mb-12 text-center">
+    <div className="min-h-screen bg-background p-4 md:p-8 flex flex-col">
+      <div className="max-w-4xl mx-auto w-full flex-1 flex flex-col">
+        <header className="mb-12 text-center mt-8">
           <h1 className="text-4xl font-bold mb-4">Practice Exam Platform</h1>
           <p className="text-xl text-muted-foreground">Select an exam to start your preparation.</p>
         </header>
@@ -27,7 +27,7 @@ export default function Home() {
           ))}
         </div>
         
-        <footer className="mt-16 py-4 border-t border-border text-center text-xs text-muted-foreground">
+        <footer className="mt-auto pt-8 pb-4 border-t border-border text-center text-xs text-muted-foreground">
           Practice Exam Platform &bull; Developed by Fatma Mejri
         </footer>
       </div>

@@ -55,8 +55,9 @@ export default function QuestionCard({
 
       <div className="space-y-3">
         {question.options.map((option, index) => (
-          <label
+          <div
             key={index}
+            onClick={() => onAnswerChange(index)}
             className={`flex items-start gap-4 p-4 border rounded-xl cursor-pointer transition-all duration-200 ${
               isSelected(index)
                 ? 'border-primary bg-primary/5 shadow-sm'
@@ -67,16 +68,16 @@ export default function QuestionCard({
               <input
                 type="checkbox"
                 checked={isSelected(index)}
-                onChange={() => onAnswerChange(index)}
-                className="mt-1.5 w-5 h-5 cursor-pointer accent-primary shrink-0"
+                readOnly
+                className="mt-1.5 w-5 h-5 cursor-pointer accent-primary shrink-0 pointer-events-none"
               />
             ) : (
               <input
                 type="radio"
                 name={`question-${question.id}`}
                 checked={isSelected(index)}
-                onChange={() => onAnswerChange(index)}
-                className="mt-1.5 w-5 h-5 cursor-pointer accent-primary shrink-0"
+                readOnly
+                className="mt-1.5 w-5 h-5 cursor-pointer accent-primary shrink-0 pointer-events-none"
               />
             )}
             <span className={`font-bold text-xs w-6 h-6 rounded-full flex items-center justify-center shrink-0 mt-0.5 transition-colors ${
@@ -89,7 +90,7 @@ export default function QuestionCard({
             <span className="flex-1 text-foreground select-none leading-relaxed mt-0.5">
               {option}
             </span>
-          </label>
+          </div>
         ))}
       </div>
 

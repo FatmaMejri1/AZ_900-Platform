@@ -60,6 +60,7 @@ export default async function CourseQuizPage({ params }: { params: Promise<{ exa
         questions={course.questions} 
         storageKey={storageKey} 
         courseTitle={course.title}
+        examTitle={exam.title}
       />
     </>
   );
