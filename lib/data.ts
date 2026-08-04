@@ -40,13 +40,14 @@ export const exams: Exam[] = [
       },
       {
         id: 'domain-2',
-        title: 'Azure Architecture & Services',
+        title: 'Learning Path 2: Introduction to Cloud Infrastructure – Describe Azure Architecture and Services',
         weight: '35-40%',
         courses: [
-          { id: 'core-components', title: 'Core Components', questions: coreComponentsQuestions },
-          { id: 'compute-networking', title: 'Compute & Networking', questions: [] },
-          { id: 'storage', title: 'Storage', questions: [] },
-          { id: 'identity-security', title: 'Identity & Security', questions: [] }
+          { id: 'core-components', title: 'Section 1: Core Architectural Components of Azure', questions: coreComponentsQuestions },
+          { id: 'compute', title: 'Section 2: Azure Compute Services', questions: [] },
+          { id: 'networking', title: 'Section 3: Azure Networking Services', questions: [] },
+          { id: 'storage', title: 'Section 4: Azure Storage Services', questions: [] },
+          { id: 'identity-security', title: 'Section 5: Azure Identity, Access, and Security', questions: [] }
         ]
       },
       {
