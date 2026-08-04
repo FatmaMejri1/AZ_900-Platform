@@ -1,0 +1,680 @@
+AWS Cloud Practitioner Quiz — Questions & Answers
+
+
+
+1. Which service can a customer use to set up a management payer account to view consolidated billing reports?
+
+A. AWS Budgets
+
+B. Amazon Macie
+
+C. Amazon QuickSight
+
+D. AWS Organizations
+
+2. Which AWS services or features can control VPC traffic? (Select TWO.)
+
+A. Security groups
+
+B. AWS Direct Connect
+
+C. Amazon GuardDuty
+
+D. Network ACLs
+
+E. Amazon Connect
+
+3. Which tasks are the customer's responsibility, according to the AWS shared responsibility model? (Select TWO.)
+
+A. Patch the guest operating system.
+
+B. Physically secure the data center hardware.
+
+C. Patch the network hardware.
+
+D. Configure firewalls.
+
+E. Decommission deprecated storage devices.
+
+4. Which benefit does Amazon Rekognition provide?
+
+A. The ability to place watermarks on images
+
+B. The ability to detect objects that appear in pictures
+
+C. The ability to resize millions of images automatically
+
+D. The ability to bid on object detection jobs
+
+5. Which AWS service can generate a finding when personally identifiable information (PII) is stored within an Amazon S3 bucket?
+
+A. Amazon GuardDuty
+
+B. Amazon Macie
+
+C. Amazon Inspector
+
+D. AWS Trusted Advisor
+
+6. What are characteristics of AWS IAM users and groups? (Select TWO.)
+
+A. Groups can be nested and can contain other groups.
+
+B. A user can be a member of multiple groups.
+
+C. Groups can contain users only and cannot be nested.
+
+D. A user can only be a member of a single group at one time.
+
+E. All new users are automatically added to a default group.
+
+7. A company wants its employees to have access to virtual desktop infrastructure to securely access company-provided desktops through the employees' personal devices. Which AWS service should the company use to meet these requirements?
+
+A. Amazon AppStream 2.0
+
+B. AWS AppSync
+
+C. Amazon FSx for Windows File Server
+
+D. Amazon WorkSpaces
+
+8. Which responsibility is shared between the user and AWS?
+
+A. Provide a key for Amazon S3 client-side encryption
+
+B. Configure an Amazon EC2 instance
+
+C. Control the environment of physical AWS data centers
+
+D. Provide awareness and training
+
+9. Which AWS service or tool can a company use to visualize, understand, and manage AWS spending and usage over time?
+
+A. AWS Trusted Advisor
+
+B. Amazon CloudWatch
+
+C. AWS Cost Explorer
+
+D. AWS Budgets
+
+10. A large company has a workload that requires hardware to remain on premises. The company wants to use the same management and control plane services that it currently uses on AWS. Which AWS service should the company use to meet these requirements?
+
+A. AWS Device Farm
+
+B. AWS Fargate
+
+C. AWS Outposts
+
+D. AWS Ground Station
+
+11. Which AWS service can help a company detect an outage of its website servers and redirect users to alternate servers?
+
+A. Amazon CloudFront
+
+B. Amazon GuardDuty
+
+C. Amazon Route 53
+
+D. AWS Trusted Advisor
+
+12. A company wants to ensure that two Amazon EC2 instances are in separate data centers with minimal communication latency between the data centers. How can the company meet this requirement?
+
+A. Place the EC2 instances in two separate AWS Regions connected with a VPC peering connection.
+
+B. Place the EC2 instances in two separate Availability Zones within the same AWS Region.
+
+C. Place one EC2 instance on premises and the other in an AWS Region. Then connect them by using an AWS VPN connection.
+
+D. Place both EC2 instances in a placement group for dedicated bandwidth.
+
+13. Which AWS Support plan includes a designated AWS technical account manager (TAM)?
+
+A. AWS Business Support
+
+B. AWS Enterprise Support
+
+C. AWS Basic Support
+
+D. AWS Developer Support
+
+14. A company has a stateless application that can handle interruptions. The application must be available all day and night. Traffic increases heavily during business hours. Which instance types for base and peak traffic are MOST cost-efficient to meet these requirements?
+
+A. Reserved Instances for both the base and peak traffic
+
+B. Reserved Instances for base traffic and Spot Instances for peak traffic using an Amazon EC2 Fleet
+
+C. On-Demand Instances for base traffic and On-Demand Instances with auto scaling for peak traffic
+
+D. On-Demand Instances for base traffic and Spot Instances for peak traffic using an Amazon EC2 Fleet
+
+15. Which feature can be used to protect Amazon S3 buckets from accidental overwrites or deletions?
+
+A. Lifecycle policies
+
+B. Bucket versioning
+
+C. Server-side encryption
+
+D. S3 access points
+
+16. According to the AWS shared responsibility model, which task is the responsibility of AWS for workloads running on Amazon EC2?
+
+A. Updating the physical hardware
+
+B. Updating the operating system
+
+C. Updating the database engine
+
+D. Updating the user data
+
+17. A web developer is concerned that a DDoS attack could target an application. Which AWS services or features can help protect against such an attack? (Select TWO.)
+
+A. AWS Shield
+
+B. AWS CloudTrail
+
+C. Amazon CloudFront
+
+D. AWS Support
+
+E. AWS Health Dashboard
+
+18. Which of the following are security principles in the AWS Well-Architected Framework? (Select TWO.)
+
+A. Analyze and attribute expenditures.
+
+B. Monitor, alert, and audit actions and changes to AWS resources.
+
+C. Deploy globally in minutes.
+
+D. Protect data in transit and at rest.
+
+E. Perform operations as code.
+
+19. Which AWS Cloud design principles can help increase reliability? (Select TWO.)
+
+A. Using monolithic architecture
+
+B. Measuring overall efficiency
+
+C. Testing recovery procedures
+
+D. Adopting a consumption model
+
+E. Automatically recovering from failure
+
+20. Which option is an AWS Cloud Adoption Framework (AWS CAF) foundational capability for the operations perspective?
+
+A. Performance and capacity management
+
+B. Application portfolio management
+
+C. Identity and access management
+
+D. Product management
+
+21. Which AWS service or feature can a developer use to access AWS services programmatically?
+
+A. AWS Management Console
+
+B. AWS software development kits (SDKs)
+
+C. AWS CodeDeploy
+
+D. AWS CodePipeline
+
+22. What is a responsibility of AWS under the AWS shared responsibility model?
+
+A. Design a customer's application for disaster recovery.
+
+B. Update the guest operating systems on deployed Amazon EC2 instances.
+
+C. Configure new resources within an AWS account.
+
+D. Secure the physical infrastructure.
+
+23. Which AWS compute service is serverless?
+
+A. Amazon EC2
+
+B. AWS Lambda
+
+C. Amazon RDS
+
+D. Amazon Elastic Container Service (Amazon ECS)
+
+24. Which AWS service offers the MOST cost-effective means of storing static images?
+
+A. Amazon S3
+
+B. Amazon DynamoDB
+
+C. AWS Snowball Edge
+
+D. Amazon Elastic Block Store (Amazon EBS)
+
+25. Which architecture design principle applies to the concept of rightsizing the AWS Cloud infrastructure?
+
+A. Scale horizontally for increased workload availability.
+
+B. Optimize for cost.
+
+C. Make frequent, small, reversible changes.
+
+D. Perform operations as code.
+
+26. A company is launching a new application in the AWS Cloud. The application will run on an Amazon EC2 instance. More EC2 instances will be needed when the workload increases. Which AWS service or tool can the company use to launch the number of EC2 instances that will be needed to handle the workload?
+
+A. Elastic Load Balancing (ELB)
+
+B. Amazon EC2 Auto Scaling
+
+C. AWS App2Container (A2C)
+
+D. AWS Systems Manager
+
+27. What is a benefit of moving to the AWS Cloud in terms of improving time to market?
+
+A. Decreased deployment speed
+
+B. Increased application security
+
+C. Increased business agility
+
+D. Increased backup capabilities
+
+28. A company needs access to cloud support engineers 24 hours a day, 7 days a week. What is the LEAST expensive AWS Support plan that meets this requirement?
+
+A. AWS Basic Support
+
+B. AWS Business Support
+
+C. AWS Developer Support
+
+D. AWS Enterprise Support
+
+29. A company wants to continuously monitor AWS account activity, including actions taken through the AWS Management Console, AWS software development kits (SDKs), and command line tools. Which AWS service meets these requirements?
+
+A. AWS Trusted Advisor
+
+B. Amazon Inspector
+
+C. Amazon CloudWatch
+
+D. AWS CloudTrail
+
+30. According to the AWS shared responsibility model, which of the following tasks are AWS responsibilities? (Select TWO.)
+
+A. The physical security of AWS facilities.
+
+B. Encrypting customer data.
+
+C. Patching and updating the hypervisor.
+
+D. Patching operating systems on Amazon EC2.
+
+E. Defining network firewalls inside the VPC
+
+31. What is an AWS best practice for managing an AWS account root user?
+
+A. Share the root user password with the operations team.
+
+B. Turn on multi-factor authentication (MFA) for the root user.
+
+C. Create an access key for the root user.
+
+D. Do not rotate the root user password.
+
+32. A company has existing software licenses that it wants to bring to AWS, but the licensing model requires licensing physical cores. How can the company meet this requirement in the AWS Cloud?
+
+A. Launch an Amazon EC2 instance with default tenancy.
+
+B. Launch an Amazon EC2 instance on a Dedicated Host.
+
+C. Create an On-Demand Capacity Reservation.
+
+D. Purchase Dedicated Reserved Instances.
+
+33. A company does not own a physical data center but needs a network solution that connects employee laptops directly to the AWS Cloud. Which AWS service will meet this requirement?
+
+A. AWS Outposts
+
+B. AWS Client VPN
+
+C. AWS Snowball Edge
+
+D. Amazon CloudFront
+
+34. A company has a Java web application. The company wants to use auto deployment to create the AWS environment and deploy new versions of its application. Which AWS service will meet these requirements?
+
+A. AWS Auto Scaling
+
+B. AWS Elastic Beanstalk
+
+C. AWS Control Tower
+
+D. Amazon EC2
+
+35. What is an IAM best practice for AWS account root user access keys?
+
+A. Delete all root user access keys, if possible.
+
+B. Use root user credentials to access sensitive information stored on AWS.
+
+C. Allow the system administrator group to use the root user credentials for daily access.
+
+D. Use root user credentials to access production database instances.
+
+36. Which of the following is a benefit of using an AWS managed service?
+
+A. Reduced operational overhead for a company's IT staff
+
+B. Increased fixed costs that can be predicted by a finance team
+
+C. Removal of the need to have a backup strategy
+
+D. Removal of the need to follow compliance standards
+
+37. A company needs to audit its AWS resources. The company must document any changes that have been made to the resources. Which AWS service will meet these requirements?
+
+A. AWS Artifact
+
+B. AWS Config
+
+C. Amazon Inspector
+
+D. Amazon CloudWatch
+
+38. A cloud practitioner is developing a disaster recovery plan and intends to replicate data between multiple geographic areas. Which component of the AWS Cloud should the company use to meet these requirements?
+
+A. AWS accounts
+
+B. AWS Regions
+
+C. Availability Zones
+
+D. Edge locations
+
+39. A company needs to run an application on Amazon EC2 instances. The running workload cannot be interrupted. The company needs an instance purchasing option that requires no commitment. Which instance purchasing option will meet these requirements MOST cost effectively?
+
+A. On-Demand Instances
+
+B. Spot Instances
+
+C. Dedicated Hosts
+
+D. Reserved Instances
+
+40. Which AWS service can be used to migrate an active, on-premises database to the AWS Cloud?
+
+A. AWS Storage Gateway
+
+B. AWS Application Migration Service
+
+C. AWS DataSync
+
+D. AWS Database Migration Service (AWS DMS)
+
+41. Which tasks require use of the AWS account root user? (Select TWO.)
+
+A. Restoring IAM administrator permissions
+
+B. Modifying an Amazon EC2 instance type
+
+C. Grouping resources in AWS Systems Manager
+
+D. Running applications in Amazon Elastic Kubernetes Service (Amazon EKS)
+
+E. Closing an AWS account
+
+42. A developer needs to access AWS resources from the AWS CLI. Which feature in AWS Identity and Access Management (IAM) can the developer use for authentication?
+
+A. IAM access keys
+
+B. IAM policies
+
+C. SSH keys
+
+D. Account password policies
+
+43. A company wants to build a data analytics application that uses Amazon Redshift. The company needs a cost estimate for its future Amazon Redshift usage. Which AWS tool will provide a high-level cost estimation?
+
+A. AWS Budgets
+
+B. AWS Pricing Calculator
+
+C. AWS Cost Explorer
+
+D. Savings Plans
+
+44. According to the AWS shared responsibility model, which security-related tasks are the customer's responsibility? (Select TWO.)
+
+A. Security of edge locations
+
+B. Client-side data encryption
+
+C. Hardware security within AWS Regions
+
+D. AWS global infrastructure network security
+
+E. Customer data integrity
+
+45. An application is receiving SQL injection attacks from multiple external resources. Which AWS service or feature can help automate mitigation against these attacks?
+
+A. AWS WAF
+
+B. Security groups
+
+C. Elastic Load Balancing (ELB)
+
+D. Network ACL
+
+46. An online retail company has seasonal sales spikes several times a year, primarily around holidays. Demand is lower at other times. The company finds it difficult to predict the increasing infrastructure demand for each season. Which advantages of moving to the AWS Cloud would MOST benefit the company? (Select TWO.)
+
+A. Global footprint
+
+B. Elasticity
+
+C. AWS service quotas
+
+D. AWS shared responsibility model
+
+E. Pay-as-you-go pricing
+
+47. Which AWS database service provides in-memory data storage?
+
+A. Amazon DynamoDB
+
+B. Amazon ElastiCache
+
+C. Amazon RDS
+
+D. Amazon Timestream
+
+48. A system automatically recovers from failure when a company launches its workload on the AWS Cloud services platform. Which pillar of the AWS Well-Architected Framework does this situation demonstrate?
+
+A. Reliability
+
+B. Cost optimization
+
+C. Performance efficiency
+
+D. Operational excellence
+
+49. Which of the following will help a user determine if they need to request a VPC service limit increase?
+
+A. AWS Health Dashboard
+
+B. AWS Trusted Advisor
+
+C. AWS Cost and Usage Report
+
+D. AWS Service Catalog
+
+50. Which of the following are security best practices for using AWS Identity and Access Management (IAM)? (Select TWO.)
+
+A. Use AWS account root user credentials for IAM tasks.
+
+B. Rotate credentials regularly.
+
+C. Do not remove credentials, even if they are never used.
+
+D. Enable multi-factor authentication (MFA).
+
+E. Use inline policies instead of customer managed policies.
+
+51. Which AWS benefit enables users to deploy cloud infrastructure that consists of multiple geographic Regions connected by a network with low latency, high throughput, and redundancy?
+
+A. Economies of scale
+
+B. Security
+
+C. Elasticity
+
+D. Global reach
+
+52. Which AWS service uses machine learning to identify sensitive data that is stored in Amazon S3 buckets?
+
+A. Amazon Personalize
+
+B. Amazon Macie
+
+C. AWS CodePipeline
+
+D. AWS CodeArtifact
+
+53. A company hosts an application on an Amazon EC2 instance. The EC2 instance needs to access several AWS resources, including Amazon S3 and Amazon DynamoDB. What is the MOST operationally efficient solution to delegate permissions?
+
+A. Create an IAM role with the required permissions. Attach the role to the EC2 instance.
+
+B. Create an IAM user and use its access key and secret access key in the application.
+
+C. Create an IAM user and use its access key and secret access key to create a CLI profile in the EC2 instance.
+
+D. Create an IAM role with the required permissions. Attach the role to the administrative IAM user.
+
+54. A company wants to host its relational databases on AWS. The databases have predefined schemas that the company needs to replicate on AWS. Which AWS services could the company use for the databases? (Select TWO.)
+
+A. Amazon Aurora
+
+B. Amazon RDS
+
+C. Amazon DocumentDB (with MongoDB compatibility)
+
+D. Amazon Neptune
+
+E. Amazon DynamoDB
+
+55. Which AWS service provides a simple way to set up a new multi-account AWS environment and govern it at scale?
+
+A. AWS Trusted Advisor
+
+B. AWS Security Hub
+
+C. AWS Control Tower
+
+D. AWS Resource Access Manager
+
+56. What is an example of high availability in the AWS Cloud?
+
+A. Consulting AWS technical support at any time of the day
+
+B. Ensuring that an application remains accessible, even if a resource fails
+
+C. Making any AWS service available for use by paying on demand
+
+D. Deploying in any part of the world by using AWS Regions
+
+57. A user has petabytes of data to migrate to AWS from an area where high-speed network connections are not possible. Which service is the FASTEST way to transfer the data?
+
+A. Amazon S3
+
+B. AWS Batch
+
+C. AWS Snowball Edge
+
+D. AWS VPN
+
+58. A company has an Amazon EC2 instance that must access AWS Secrets Manager to retrieve credentials. Which identity or service is required by the EC2 instance to perform the task?
+
+A. Multi-factor authentication (MFA)
+
+B. IAM role
+
+C. IAM group
+
+D. Security groups
+
+59. A company is moving its office and must establish an encrypted connection to AWS. Which AWS service will meet this requirement?
+
+A. AWS VPN
+
+B. Amazon Route 53
+
+C. AWS Direct Connect
+
+D. Amazon Connect
+
+60. After selecting an Amazon EC2 Dedicated Host reservation, which pricing option would provide the largest discount?
+
+A. No upfront payment
+
+B. Hourly on-demand payment
+
+C. Partial upfront payment
+
+D. All upfront payment
+
+61. Which of the following are characteristics of AWS Regions and Availability Zones? (Select TWO.)
+
+A. Regions bring AWS services to on-premises facilities.
+
+B. Regions consist of multiple Availability Zones.
+
+C. An Availability Zone contains several Regions.
+
+D. Regions are within 100 km (60 miles) of each other.
+
+E. Regions are located around the world
+
+62. A company needs to transfer 60 TB of data to the AWS Cloud in a secure manner. Which of the following should the company use to meet these requirements?
+
+A. AWS Snowball Edge
+
+B. Amazon Elastic Block Store (Amazon EBS)
+
+C. Amazon Elastic File System (Amazon EFS)
+
+D. Amazon S3
+
+63. A company wants to improve its security and audit posture by limiting Amazon EC2 inbound access. What should the company use to access instances remotely instead of opening inbound SSH ports and managing SSH keys?
+
+A. EC2 key pairs
+
+B. AWS Systems Manager Session Manager
+
+C. AWS Identity and Access Management (IAM)
+
+D. Network ACLs
+
+64. Which AWS service should be used to monitor Amazon EC2 instances for CPU and network utilization?
+
+A. Amazon Inspector
+
+B. AWS CloudTrail
+
+C. Amazon CloudWatch
+
+D. AWS Config
+
+65. A company is using AWS CloudFormation to provision its infrastructure and needs to manage a resource that CloudFormation does not support natively. What can the company use in CloudFormation to manage this resource?
+
+A. AWS Elastic Beanstalk
+
+B. AWS CodeDeploy
+
+C. AWS Systems Manager Parameter Store
+
+D. Custom resources
+

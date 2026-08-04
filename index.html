@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AWS Cloud Practitioner Practice Exam - CLF-C02">
+    <meta name="theme-color" content="#FF9900">
+    <title>AWS Cloud Practitioner Practice Exam</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header class="header">
+            <div class="header-top">
+                <h1 class="header-title">AWS Cloud Practitioner Practice Exam</h1>
+                <p class="header-subtitle">AWS CLF-C02 Practice Assessment</p>
+            </div>
+            <div class="header-info">
+                <div class="info-item">
+                    <span class="info-label">Total Questions</span>
+                    <span class="info-value" id="totalQuestions">65</span>
+                </div>
+                <div class="info-item" id="skippedBadge" style="display:none">
+                    <span class="info-label">Skipped</span>
+                    <span class="info-value skipped-count" id="skippedCount">0</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Time Remaining</span>
+                    <span class="info-value" id="timerDisplay">90:00</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Progress Section -->
+        <div class="progress-section">
+            <div class="progress-text">
+                <span id="currentQuestion">Question 1</span> of <span id="totalQuestionsText">65</span>
+            </div>
+            <div class="progress-bar-container">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Quiz Section -->
+            <div id="quizSection" class="quiz-section">
+                <div class="question-card">
+                    <div class="question-header">
+                        <h2 class="question-number" id="questionNumber">Question 1</h2>
+                    </div>
+                    <p class="question-text" id="questionText"></p>
+                    
+                    <div class="options-container" id="optionsContainer"></div>
+                </div>
+
+                <div class="navigation-buttons">
+                    <button id="prevBtn" class="btn btn-secondary" disabled>← Previous</button>
+                    <button id="skipBtn" class="btn btn-skip hidden">⏭ Skip &amp; Review Later</button>
+                    <button id="nextBtn" class="btn btn-primary" disabled>Next →</button>
+                    <button id="finishBtn" class="btn btn-finish hidden">Finish Exam</button>
+                </div>
+            </div>
+
+            <!-- Results Section (Hidden by default) -->
+            <div id="resultsSection" class="results-section hidden">
+                <!-- Score Card -->
+                <div class="score-card">
+                    <h2>Final Score</h2>
+                    <div class="score-display">
+                        <div class="score-number" id="scoreNumber">0</div>
+                        <div class="score-text" id="scoreText">/ 65</div>
+                    </div>
+                    <div class="percentage-display">
+                        <div class="percentage" id="percentageDisplay">0%</div>
+                        <div class="pass-fail" id="passFail">Pass</div>
+                    </div>
+                </div>
+
+                <!-- Summary Statistics -->
+                <div class="summary-statistics">
+                    <div class="stat-item">
+                        <span class="stat-label">Total Questions</span>
+                        <span class="stat-value" id="statTotal">65</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Correct Answers</span>
+                        <span class="stat-value" id="statCorrect">0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Incorrect Answers</span>
+                        <span class="stat-value" id="statIncorrect">0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Time Taken</span>
+                        <span class="stat-value" id="statTime">0:00</span>
+                    </div>
+                </div>
+
+                <!-- Review Section -->
+                <div class="review-section" id="reviewSection"></div>
+
+                <!-- Restart Button -->
+                <button id="restartBtn" class="btn btn-primary btn-large">Take Exam Again</button>
+            </div>
+        </main>
+
+        <!-- Footer Credit -->
+        <footer class="footer-credit">
+            AWS Practice Exam Platform &bull; Designed & Developed by Fatma Mejri
+        </footer>
+
+        <!-- Confirmation Modal -->
+        <div id="confirmationModal" class="modal hidden">
+            <div class="modal-content">
+                <h3>Are you sure you want to submit your exam?</h3>
+                <p>You won't be able to change your answers after submission.</p>
+                <div class="modal-buttons">
+                    <button id="cancelBtn" class="btn btn-secondary">Cancel</button>
+                    <button id="confirmBtn" class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Overlay -->
+        <div id="modalOverlay" class="modal-overlay hidden"></div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="questions.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
