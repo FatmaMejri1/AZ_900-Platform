@@ -31,7 +31,7 @@ export const exams: Exam[] = [
     domains: [
       {
         id: 'domain-1',
-        title: 'Cloud Concepts',
+        title: 'Describe Cloud Concepts',
         weight: '25-30%',
         courses: [
           { id: 'cloud-computing', title: 'Cloud Computing', questions: [] },
@@ -41,7 +41,7 @@ export const exams: Exam[] = [
       },
       {
         id: 'domain-2',
-        title: 'Learning Path 2: Introduction to Cloud Infrastructure – Describe Azure Architecture and Services',
+        title: 'Describe Azure Architecture and Services',
         weight: '35-40%',
         courses: [
           { id: 'core-components', title: 'Section 1: Core Architectural Components of Azure', questions: coreComponentsQuestions },
@@ -53,7 +53,7 @@ export const exams: Exam[] = [
       },
       {
         id: 'domain-3',
-        title: 'Azure Management & Governance',
+        title: 'Describe Azure Management & Governance',
         weight: '30-35%',
         courses: [
           { id: 'cost-management', title: 'Cost Management', questions: [] },
