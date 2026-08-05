@@ -1,6 +1,7 @@
 import { Question } from './quiz-data';
 import { coreComponentsQuestions } from './az900-core-components';
 import { computeQuestions } from './az900-compute';
+import { networkingQuestions } from './az900-networking';
 
 export interface Course {
   id: string;
@@ -46,7 +47,7 @@ export const exams: Exam[] = [
         courses: [
           { id: 'core-components', title: 'Section 1: Core Architectural Components of Azure', questions: coreComponentsQuestions },
           { id: 'compute', title: 'Section 2: Azure Compute Services', questions: computeQuestions },
-          { id: 'networking', title: 'Section 3: Azure Networking Services', questions: [] },
+          { id: 'networking', title: 'Section 3: Azure Networking Services', questions: networkingQuestions },
           { id: 'storage', title: 'Section 4: Azure Storage Services', questions: [] },
           { id: 'identity-security', title: 'Section 5: Azure Identity, Access, and Security', questions: [] }
         ]
