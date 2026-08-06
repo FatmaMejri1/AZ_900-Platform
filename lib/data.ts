@@ -3,6 +3,7 @@ import { coreComponentsQuestions } from './az900-core-components';
 import { computeQuestions } from './az900-compute';
 import { networkingQuestions } from './az900-networking';
 import { cloudComputingQuestions } from './az900-cloud-computing';
+import { benefitsQuestions } from './az900-benefits';
 
 export interface Course {
   id: string;
@@ -37,7 +38,7 @@ export const exams: Exam[] = [
         weight: '25-30%',
         courses: [
           { id: 'cloud-computing', title: 'Cloud Computing', questions: cloudComputingQuestions },
-          { id: 'benefits-of-cloud', title: 'Benefits of Cloud', questions: [] },
+          { id: 'benefits-of-cloud', title: 'Benefits of Cloud', questions: benefitsQuestions },
           { id: 'cloud-service-types', title: 'Cloud Service Types', questions: [] }
         ]
       },
