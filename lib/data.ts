@@ -5,6 +5,7 @@ import { networkingQuestions } from './az900-networking';
 import { cloudComputingQuestions } from './az900-cloud-computing';
 import { benefitsQuestions } from './az900-benefits';
 import { cloudServiceTypesQuestions } from './az900-cloud-service-types';
+import { storageQuestions } from './az900-storage';
 
 export interface Course {
   id: string;
@@ -51,7 +52,7 @@ export const exams: Exam[] = [
           { id: 'core-components', title: 'Section 1: Core Architectural Components of Azure', questions: coreComponentsQuestions },
           { id: 'compute', title: 'Section 2: Azure Compute Services', questions: computeQuestions },
           { id: 'networking', title: 'Section 3: Azure Networking Services', questions: networkingQuestions },
-          { id: 'storage', title: 'Section 4: Azure Storage Services', questions: [] },
+          { id: 'storage', title: 'Section 4: Azure Storage Services', questions: storageQuestions },
           { id: 'identity-security', title: 'Section 5: Azure Identity, Access, and Security', questions: [] }
         ]
       },
